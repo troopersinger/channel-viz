@@ -144,18 +144,24 @@
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
 
 						 			// Build Graph
-								
-
-var graph = new Rickshaw.Graph({
-        element: document.querySelector("#chart"),
-        renderer: 'bar',
-        series: [{
-                data: [ { x: 0, y: 40 }, { x: 1, y: 49 }, ...
-                color: 'steelblue'
-        }]
+						 				var graph = new Rickshaw.Graph( {
+element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
+width: 600,
+height: 200,
+renderer: 'bar',
+min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+padding: {
+top: 0.02,
+right: 0.02,
+bottom: 0.02,
+left: 0.02
+},
+series: series
 });
- 
+
 graph.render();
+
 
 
 
