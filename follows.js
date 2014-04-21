@@ -12,7 +12,7 @@
 		hideForm		= 0;
 	*/
 
-	var defaultKey		= 'uu6F5QTHhgPZFzATG0r5bIvQd8CqRAgfSJRy46iSeH6Xuk82', // Unique master Xively API key to be used as a default
+	var defaultKey		= 'xbz7J4R3ecDuh7YL5cd2hzehFcuTUvfLapSoQp8xexoXMzva', // Unique master Xively API key to be used as a default
 		defaultFeeds	= [3887585], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'Jarkon mittaukset', // Replaces Xively logo in the header
 		dataDuration	= '90days', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
